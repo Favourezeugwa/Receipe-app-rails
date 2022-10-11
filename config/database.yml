@@ -25,7 +25,7 @@ development:
   <<: *default
   database: Receipe_app_rails_development
   username: postgres
-  password: favour1998
+  password: 
   host: localhost
   port: 8000
 
@@ -63,7 +63,7 @@ test:
   <<: *default
   database: Receipe_app_rails_test
   username: postgres
-  password: favour1998
+  password: 
   host: localhost
   port: 8000
 
