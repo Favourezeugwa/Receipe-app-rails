@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 User.destroy_all
+Inventory.destroy_all
 
 # User seeder
 user = User.create!(name: 'Rito')
+
+# Inventory Seeder
+inventory = Inventory.create!(name: 'Inventory 1', user: user)
