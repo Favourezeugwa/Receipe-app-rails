@@ -9,7 +9,7 @@ User.destroy_all
 Inventory.destroy_all
 
 # User seeder
-user = User.create!(name: 'Rito')
+user = User.create!(name: 'Rito', email:'abcd@gmail.com', password: '123456')
 
 # Inventory Seeder
 inventory = Inventory.create!(name: 'Inventory 1', user: user)
