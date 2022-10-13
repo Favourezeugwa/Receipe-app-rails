@@ -8,10 +8,18 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "public_recipes#index"
   resources :foods, only: [:index]
-  resources :recipes, only: [:index, :show]
+  resources :recipes, only: [:index, :show , :new, :create, :edit, :update, :destroy]
   resources :inventories, only: [:index, :show]
   resources :shopping_lists, only: [:index]
   resources :public_recipes, only: [:index]
+  resources :recipe_foods, only: [:new, :create, :edit, :update, :destroy]
+
+  resources :recipes, only: [:index, :show, :new, :create, :destroy] do
+    resources :recipe_foods, only: [:new, :create, :destroy, :update, :edit]
+    resources :shopping_list, only: [:index, :show]
+  end
+
+
 
   resources :foods, only: [:new, :create, :destroy]
 end
