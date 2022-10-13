@@ -1,12 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe RecipeFood, type: :model do
-  describe 'Tests for RecipeFood model validation ' do
+RSpec.describe InventoryFood, type: :model do
+  describe 'Tests for InventoryFood model validation ' do
     @user = User.new(name: 'Rito', email: 'abcd@gmail.com', password: '123456')
+    @inventory = Inventory.new(user: @user, name: 'Hello')
     @food = Food.new(name: 'Kabab', measurement_unit: 'kg', price: 100)
-    @recipe = Recipe.new(user: @user, name: 'Hello', description: 'This is my first recipe description',
-                         preparation_time: '10:00min', cooking_time: '60min', public: true)
-    subject { RecipeFood.new(recipe: @recipe, food: @food, quantity: 5) }
+    subject { InventoryFood.new(inventory: @inventory, food: @food, quantity: 5) }
     before { subject.save }
 
     it 'quantity should not be nil' do
