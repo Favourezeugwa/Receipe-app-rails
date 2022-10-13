@@ -14,13 +14,13 @@
  *= require_self
  */
 
- .inventories {
-    display: flex;
-    width: 87%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-    border: 0.1rem solid #646464;
-    box-shadow: -6px 3px 15px rgb(131, 128, 128, 0.6);
-    padding: 2rem;
-  }
+.inventories {
+  display: flex;
+  width: 87%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  border: 0.1rem solid #646464;
+  box-shadow: -6px 3px 15px rgb(131, 128, 128, 0.6);
+  padding: 2rem;
+}
