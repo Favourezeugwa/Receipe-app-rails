@@ -8,12 +8,12 @@
 
 <div class="mb-3">
     <%= form.label :preparation_time, class: "form-label" %>
-    <%= form.text_field :preparation_time, class:'form-control' %>
+    <%= form.number_field :preparation_time, class:'form-control' %>
   </div>
 
 <div class="mb-3">
     <%= form.label :cooking_time, class: "form-label" %>
-    <%= form.text_field :cooking_time, class:'form-control' %>
+    <%= form.number_field :cooking_time, class:'form-control' %>
   </div>
 
 <div class="mb-3">
@@ -22,8 +22,8 @@
 </div>
 
 <div class="mb-3">
-    <%= hidden_field_tag :public, false %>
-    <%= check_box_tag :public, checked = true %> Public</br>
+    <%= form.check_box :public %>
+    <%= form.label :public, class: "form-label"%>
 </div>
 
  <div class="actions mb-5">

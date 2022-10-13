@@ -43,7 +43,7 @@
     </div>
   </div>
   <div class="d-flex justify-content-between">
-    <%= link_to shopping_lists_path(@recipe), :class => "btn btn-dark bg-dark add mb-3" do %>
+    <%= link_to  shopping_lists_path(recipe_id:@recipe,inventory), :class => "btn btn-dark bg-dark add mb-3" do %>
     Generate shopping list <% end %> <%= link_to new_recipe_recipe_food_path(@recipe), :class => "btn
     btn btn-outline-dark add mb-3" do %> Add Ingredients <% end %>
   </div>

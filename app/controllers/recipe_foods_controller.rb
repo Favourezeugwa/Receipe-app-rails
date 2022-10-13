@@ -8,7 +8,7 @@ class RecipeFoodsController < ApplicationController
       @recipe = Recipe.find(params[:recipe_id])
       @recipe_food = @recipe.recipe_foods.create(recipe_foods_params)
       if @recipe_food.save
-        flash[:notice] = 'Food created.'
+        flash[:notice] = 'Food created sucessfully.'
         redirect_to @recipe
       else
         render :new
@@ -37,12 +37,6 @@ class RecipeFoodsController < ApplicationController
     end
   
     private
-  
-    # Use callbacks to share common setup or constraints between actions.
-  
-    def update_params
-      params.require(:recipe_food).permit(:quantity, :food_id)
-    end
   
     def recipe_foods_params
       params.require(:recipe_food).permit(:quantity, :food_id)
