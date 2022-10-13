@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Food, type: :model do
   describe 'Tests for Food model validation ' do
-    @user = User.new(name: 'Rito', email: 'abcd@gmail.com', password: '123456')
-    subject { Food.new(user: @user, name: 'Kabab', measurement_unit: 'kg', price: 100, quantity: 4) }
+    subject { Food.new(name: 'Kabab', measurement_unit: 'kg', price: 100) }
     before { subject.save }
 
     it 'name should be present' do
@@ -26,10 +25,6 @@ RSpec.describe Food, type: :model do
 
     it 'price should not be less than 0' do
       subject.price = -4
-      expect(subject).to_not be_valid
-    end
-    it 'quantity should not be less than 0' do
-      subject.quantity = -5
       expect(subject).to_not be_valid
     end
 
