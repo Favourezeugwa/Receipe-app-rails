@@ -22,6 +22,13 @@ class InventoriesController < ApplicationController
     redirect_to @inventory, notice: 'Inventory added successfully.'
   end
 
+  def destroy
+    @inventory = Inventory.find(params[:id])
+    @inventory.destroy
+    flash[:notice] = "Inventory: #{inventory.name}, successfully deleted."
+    redirect_to inventories_url
+  end
+
   private
 
   def inventory_params
