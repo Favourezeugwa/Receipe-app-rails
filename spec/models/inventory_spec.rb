@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Inventory, type: :model do
   describe 'Tests for Inventory model validation ' do
     @user = User.new(name: 'Rito', email: 'abcd@gmail.com', password: '123456')
-    subject { Inventory.new(user: @user, name: 'Hello') }
+    subject { Inventory.new(user: @user, name: 'Hello', description: 'Inventory Desc') }
     before { subject.save }
 
     it 'name should be present' do
