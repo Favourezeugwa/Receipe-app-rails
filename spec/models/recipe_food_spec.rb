@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.describe RecipeFood, type: :model do
   describe 'Tests for RecipeFood model validation ' do
     @user = User.new(name: 'Rito', email: 'abcd@gmail.com', password: '123456')
-    @food = Food.new(user: @user, name: 'Kabab', measurement_unit: 'kg', price: 100, quantity: 4)
-    @recipe = Recipe.new(user: @user, name: 'Hello', description: 'This is my first recipe description')
+    @food = Food.new(name: 'Kabab', measurement_unit: 'kg', price: 100)
+    @recipe = Recipe.new(user: @user, name: 'Hello', description: 'This is my first recipe description',
+                         preparation_time: '10:00min', cooking_time: '60min', public: true)
     subject { RecipeFood.new(recipe: @recipe, food: @food, quantity: 5) }
     before { subject.save }
 
