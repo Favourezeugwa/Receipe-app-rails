@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Recipe Show page", type: :feature do
+RSpec.describe 'Recipe Show page', type: :feature do
   before :each do
     @user1 = User.create(
-      name: "Favour",
+      name: 'Favour',
       email: 'favour@gmail.com',
       password: '1234567'
     )
@@ -12,7 +12,7 @@ RSpec.describe "Recipe Show page", type: :feature do
       name: 'JollofRice',
       preparation_time: 5,
       cooking_time: 30,
-      description:'This is a very delicious jollof rice',
+      description: 'This is a very delicious jollof rice',
       public: true,
       user_id: @user1.id
     )
@@ -21,16 +21,16 @@ RSpec.describe "Recipe Show page", type: :feature do
       name: 'FriedRice',
       preparation_time: 5,
       cooking_time: 30,
-      description:'This is a very delicious fried rice',
+      description: 'This is a very delicious fried rice',
       public: true,
       user_id: @user1.id
     )
   end
 
-  describe "Recipe Show page" do
+  describe 'Recipe Show page' do
     it 'should have content of the recipe' do
       visit recipe_path(@recipe1)
-      expect(page).to have_content("Welcome to Receipes show page!")
+      expect(page).to have_content('Welcome to Receipes show page!')
     end
   end
 end
