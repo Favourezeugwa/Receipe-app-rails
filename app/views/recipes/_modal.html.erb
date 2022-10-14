@@ -10,7 +10,7 @@
         <div class="d-flex">
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ...  Select Inventory  ...
+              . . . Select Inventory . . .
             </button>
             <ul class="dropdown-menu">
               <% @inventories.each do |inventory| %>
@@ -21,7 +21,9 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Generate</button>
+        <%= link_to  shopping_lists_path(recipe_id:@recipe, inventory_id:@inventory), :class => "btn btn-primary add mb-3" do %>
+          Generate shopping list 
+        <% end %>
       </div>
     </div>
   </div>
