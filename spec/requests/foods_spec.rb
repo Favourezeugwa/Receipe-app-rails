@@ -13,7 +13,7 @@ RSpec.describe 'Foods', type: :request do
     end
 
     it 'should return response status correct (ok)' do
-      expect(response).to have_http_status("302")
+      expect(response).to have_http_status('302')
     end
 
     it 'respons to html' do
