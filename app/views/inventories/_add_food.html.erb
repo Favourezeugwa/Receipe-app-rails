@@ -1,0 +1,38 @@
+<div class="modal fade" id="foodAdd" tabindex="-1" aria-labelledby="foodAdddropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="foodAdddropLabel">Food Inventory</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <%= form_with url: "/inventories/#{@inventory.id}/inventory_foods", method: :post do |form| %>
+        <div class="modal-body">
+            <h4>Add food to <%= @inventory.name %></h4>
+
+            <div class="mb-3">
+                <%= form.label :food, class:'form-label' %><br />
+                <select class="form-select" aria-label="food select">
+                    <option selected>Select Food from list</option>
+                    <% @foods.each do |food| %>
+                        <option value="<%= food.id %>"><%= food.name %></option>
+                    <% end %>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <%= form.label :quantity, class:'form-label' %><br />
+                <%= form.text_field :quantity, class:'form-control' %>
+            </div>
+            
+            
+        </div>
+
+        <div class="modal-footer">
+            <%= form.submit "Add Inventory Food", class:'btn btn-lg btn-success' %>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>
