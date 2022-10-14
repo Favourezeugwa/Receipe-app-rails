@@ -1,4 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/Favour-Ezeugwa-black?labelColor=green)
+![](https://img.shields.io/badge/Assadounto-red)
+![](https://img.shields.io/badge/Ritobroto-Mukherjee-blueviolet?labelColor=yellow)
 
 # Receipe-App
 
@@ -75,7 +77,6 @@ Install all project dependencies by running the command below
 
 👤 **Ritobroto Mukherjee**
 
-- Portfolio: [@Rito](https://ritobroto-mukherjee.blogspot.com/)
 - GitHub: [@RitobrotoMukherjee](https://github.com/RitobrotoMukherjee)
 - Twitter: [@RitobrotoM3](https://twitter.com/RitobrotoM3)
 - LinkedIn: [Ritobroto Mukherjee](https://www.linkedin.com/in/ritobroto-mukherjee-519148ba/)
