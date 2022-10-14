@@ -16,9 +16,11 @@
           <span class="card-text fw-bold"
             >Total food items: <%= recipe.recipe_foods.length %> </span
           ><br />
-        <%= button_to 'Remove',
-          recipe_path(recipe), method: :delete, class: "btn btn-danger
-          text-decoration-none" %> 
+        <% if can? :destroy, recipe %>
+          <%= button_to 'Remove',
+            recipe_path(recipe), method: :delete, class: "btn btn-danger
+            text-decoration-none" %> 
+          <% end %>
         </div>
       </div>
     </li>

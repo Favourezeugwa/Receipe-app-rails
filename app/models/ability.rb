@@ -3,15 +3,18 @@ class Ability
 
   def initialize(user)
     # Define abilities for the user here. For example:
-    can :read, Recipe if recipe.public?
-
-    return unless user.present?
-
-    can :manage, :all, user_id: user.id
-
-    return unless user.role == 'admin'
-
-    can :manage, :all
+    user ||= User.new # guest user (not logged in)
+    can :read, Recipe do |recipe|
+      recipe.user == user || recipe.public
+    end
+    can %i[update destroy], Recipe do |recipe|
+      recipe.user == user
+    end
+    can :read, Food
+    can :destroy, Food do |food|
+      food.user.id == user.id
+    end
+    can %i[create], :all
     #   return unless user.present?
     #   can :read, :all
     #   return unless user.admin?

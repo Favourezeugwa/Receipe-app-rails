@@ -73,6 +73,18 @@ Install all project dependencies by running the command below
 - LinkedIn: [Favour Amarachi Ezeugwa](https://www.linkedin.com/in/favour-amarachi-ezeugwa-a5bb31149/)
 - Twitter:[@Favour_ezeugwa](https://twitter.com/Favour_ezeugwa)
 
+👤 **Ritobroto Mukherjee**
+
+- Portfolio: [@Rito](https://ritobroto-mukherjee.blogspot.com/)
+- GitHub: [@RitobrotoMukherjee](https://github.com/RitobrotoMukherjee)
+- Twitter: [@RitobrotoM3](https://twitter.com/RitobrotoM3)
+- LinkedIn: [Ritobroto Mukherjee](https://www.linkedin.com/in/ritobroto-mukherjee-519148ba/)
+
+👤 **Rich Adu-kyere**
+
+- GitHub: [@assadounto](https://github.com/assadounto)
+- Twitter: [@adukyerer](https://twitter.com/adukyerer)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/adu-kyere)
 
 ## 🤝 Contributing
 
