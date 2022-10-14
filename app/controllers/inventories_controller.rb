@@ -7,6 +7,7 @@ class InventoriesController < ApplicationController
 
   def show
     @inventory = Inventory.find(params[:id])
+    @inventory_foods = @inventory.inventory_foods
   end
 
   def new
@@ -25,7 +26,7 @@ class InventoriesController < ApplicationController
   def destroy
     @inventory = Inventory.find(params[:id])
     @inventory.destroy
-    flash[:notice] = "Inventory: #{inventory.name}, successfully deleted."
+    flash[:notice] = "Inventory: #{@inventory.name}, successfully deleted."
     redirect_to inventories_url
   end
 

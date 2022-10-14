@@ -15,12 +15,8 @@
  */
 
 .inventories {
-  display: flex;
-  width: 87%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
   border: 0.1rem solid #646464;
+  border-radius: 1.2rem;
   box-shadow: -6px 3px 15px rgb(131, 128, 128, 0.6);
   padding: 2rem;
 }

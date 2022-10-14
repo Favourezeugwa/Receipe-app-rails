@@ -1,5 +1,10 @@
-<div>
-  <%= link_to new_inventory_path, :class => "btn btn-secondary add mb-3" do %>
-  Add Inventory <% end %>
+<div class="container">
+  <div class="row justify-content-end">
+    <div class="col-2 text-end">
+    <%= link_to new_inventory_path, :class => "btn btn-secondary mb-3" do %>
+      Add Inventory 
+    <% end %>
+    </div>
+  </div>
   <%=render @inventories%>
 </div>
