@@ -5,7 +5,15 @@ class Ability
 
   def initialize(user)
     # Define abilities for the user here. For example:
-    #
+    can :read, Recipe if recipe.public?
+
+    return unless user.present?
+
+    can :manage, :all, user_id: user.id
+
+    return unless user.role == 'admin'
+
+    can :manage, :all
     #   return unless user.present?
     #   can :read, :all
     #   return unless user.admin?
