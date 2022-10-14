@@ -7,21 +7,16 @@
       </div>
       <div class="modal-body">
         <p class="text-center">Please choose an Inventory to use.</p>
-        <div class="d-flex">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ...  Select Inventory  ...
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
+        <div >
+          <%= form_with url: "/shopping_lists", method: :get do |form| %>
+             <%= form.select :inventory_id, Inventory.all.collect {|inventory| [inventory.name, inventory.id]},{
+                include_blank: true} , class:"form-select" %>
+               <%= form.hidden_field :recipe_id, value: recipe_id.id  %>
+             <div class="modal-footer">
+               Click to Generate:<%= form.submit %>
+             </div>
+          <% end %>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Generate</button>
       </div>
     </div>
   </div>

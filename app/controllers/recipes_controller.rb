@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @inventories = Inventory.where(user_id: current_user.id)
+    @inventories = Inventory.all
   end
 
   def new

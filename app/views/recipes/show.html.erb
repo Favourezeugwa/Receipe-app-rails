@@ -46,7 +46,7 @@
       <button type = "button" class= "btn btn-dark bg-dark add mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Generate shopping list
       </button>
-      <%= render partial: 'modal' %>
+      <%= render partial: 'modal', locals: { recipe_id: @recipe }  %>
       <%= link_to new_recipe_recipe_food_path(@recipe), :class => "btn
       btn btn-outline-dark add mb-3" do %> Add Ingredients 
     <% end %>
