@@ -15,7 +15,7 @@ RSpec.describe Food, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'name should not exceed 250 characters' do
+    it 'name should be between 3 - 10 characters' do
       subject.name = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
              took a galley of type and scrambled it to make a type specimen book.
