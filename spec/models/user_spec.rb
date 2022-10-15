@@ -1,27 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'Tests for User model validation ' do
-    subject { User.new(name: 'Rito', email: 'abcd@gmail.com', password: '123456') }
-
-    before { subject.save }
-
-    it 'name should be present' do
-      subject.name = nil
-      expect(subject).to_not be_valid
+  # test associations.
+  describe 'associations' do
+    it 'has many Inventories' do
+      assc = described_class.reflect_on_association(:inventories)
+      expect(assc.macro).to eq :has_many
     end
 
-    it 'name should not be blank' do
-      subject.name = ''
-      expect(subject).to_not be_valid
+    it 'has many Recipes' do
+      assc = described_class.reflect_on_association(:recipes)
+      expect(assc.macro).to eq :has_many
     end
+  end
 
-    it 'name should not exceed 250 characters' do
-      subject.name = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-             took a galley of type and scrambled it to make a type specimen book.
-              It has survived not only five centuries"
-      expect(subject).to_not be_valid
+  # test validations.
+  describe 'validations' do
+    it 'is not valid without a name' do
+      expect(User.new).to_not be_valid
     end
   end
 end
